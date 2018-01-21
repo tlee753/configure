@@ -105,23 +105,23 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Menu bar
-bar {
-    # height 24
-    position top
-    # i3bar_command i3bar -t
-    status_command i3blocks
-    tray_output primary
+# bar {
+#     # height 24
+#     position top
+#     # i3bar_command i3bar -t
+#     status_command i3blocks
+#     tray_output primary
   
-    colors {
-        separator #666666
-        background #333333
-        statusline #bbbbbb
-        focused_workspace #888888 #dddddd #222222
-        active_workspace #333333 #555555 #bbbbbb
-        inactive_workspace #333333 #555555 #bbbbbb
-        urgent_workspace #2f343a #900000 #ffffff
-    }
-}
+#     colors {
+#         separator #666666
+#         background #333333
+#         statusline #bbbbbb
+#         focused_workspace #888888 #dddddd #222222
+#         active_workspace #333333 #555555 #bbbbbb
+#         inactive_workspace #333333 #555555 #bbbbbb
+#         urgent_workspace #2f343a #900000 #ffffff
+#     }
+# }
 
 # Default programs
 bindsym $mod+Return exec termite
@@ -137,6 +137,8 @@ assign [class="Spotify"] $ws10
 
 # Start up
 exec --no-startup-id compton -F
+exec --no-startup-id start-pulseaudio-x11
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id i3-msg 'workspace $ws1; exec termite;'
 exec --no-startup-id i3-msg 'workspace $ws2; exec google-chrome;'
 exec --no-startup-id i3-msg 'workspace $ws4; exec mailspring;'
