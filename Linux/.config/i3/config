@@ -124,26 +124,26 @@ bindsym $mod+r mode "resize"
 # }
 
 # Default programs
-bindsym $mod+Return exec termite
+# bindsym $mod+Return exec termite
 bindsym $mod+d exec --no-startup-id rofi -show run
 
 # Program launch shortcuts
 bindsym $mod+shift+f exec google-chrome
 
 # Assigned programs
-assign [class="Firefox"] $ws2
-assign [class="Mailspring"] $ws4
+# assign [class="Firefox"] $ws2
+# assign [class="Mailspring"] $ws4
 assign [class="Spotify"] $ws10
 
 # Start up
 exec --no-startup-id compton -F
 exec --no-startup-id start-pulseaudio-x11
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id i3-msg 'workspace $ws1; exec termite;'
-exec --no-startup-id i3-msg 'workspace $ws2; exec google-chrome;'
-exec --no-startup-id i3-msg 'workspace $ws4; exec mailspring;'
-exec --no-startup-id i3-msg 'workspace $ws9; exec nautilus;'
-exec --no-startup-id i3-msg 'workspace $ws9; exec nautilus;'
+# exec --no-startup-id i3-msg 'workspace $ws1; exec termite;'
+# exec --no-startup-id i3-msg 'workspace $ws2; exec google-chrome;'
+# exec --no-startup-id i3-msg 'workspace $ws4; exec mailspring;'
+# exec --no-startup-id i3-msg 'workspace $ws9; exec nautilus;'
+# exec --no-startup-id i3-msg 'workspace $ws9; exec nautilus;'
 
 # Wallpaper and lockscreen
 exec_always feh --bg-scale /home/tyler/Pictures/wallpaper.jpg
