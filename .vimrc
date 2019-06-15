@@ -10,4 +10,8 @@ set cursorline
 set tabstop=4
 set softtabstop=4
 set expandtab
-highlight LineNr ctermfg=black ctermbg=black    
+highlight LineNr ctermfg=lightblue ctermbg=black    
+
+inoremap jj <Esc>
+inoremap <C-c> <Esc>
+
