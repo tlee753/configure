@@ -1,0 +1,71 @@
+[user]
+	email = tyler.j.lee@nasa.gov
+	name = Tyler Lee
+
+[core]
+  autocrlf = input
+  editor = /usr/bin/vim
+[push]
+  default = simple
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[alias]
+  amend = commit -a --amend --no-edit
+  rh = reset HEAD --hard
+  dd = difftool -d
+  st = status -sb
+  ci = commit
+  co = checkout
+  di = diff
+  br = branch
+  lg = log -p
+  rlog = reflog
+  smu = submodule update --recursive --init --progress
+  slist = submodule foreach --recursive git remote -v
+  srh = submodule foreach git reset HEAD --hard
+  ldp = log --graph --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%aN%Cgreen%d %Creset%s' --date=format:%Y%j
+  lda = log --graph --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%aN%Cgreen%d %Creset%s' --date=format:%Y%j --all
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit --date=format:%Y%j
+  lols = log --graph --decorate --pretty=oneline --abbrev-commit --stat --date=format:%Y%j
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=format:%Y%j
+  lolad = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=format:%Y%j
+  lolas = log --graph --decorate --pretty=oneline --abbrev-commit --all --stat --date=format:%Y%j
+  logp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(cyan)<%an>%Creset' --abbrev-commit --date=format:%Y_%j
+  logb = log --branches --not --remotes --name-status --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --date=format:%Y%j
+  logn = log --name-status --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=format:%Y%j
+  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+  ls = ls-files
+  rso = remote show origin
+  stl = rev-parse --show-toplevel
+  pr = pull --rebase
+  prv = pull --rebase --verbose
+[color]
+  ui = always
+ 
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+ 
+
+[difftool "meld"]
+  trustExitCode = true
+#  cmd = echo  \"$LOCAL\" \"$PWD/$REMOTE\"
+  cmd  = code --wait --diff $LOCAL $REMOTE
+#  cmd = open -W -a Meld --args \"$LOCAL\" \"$PWD/$REMOTE\"
+#  cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
+[mergetool]
+  prompt = false
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"
+  trustExitCode = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
