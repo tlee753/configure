@@ -13,7 +13,7 @@ set softtabstop=4
 set expandtab
 set backspace=indent,eol,start
 
-highlight LineNr ctermfg=red ctermbg=grey    
+highlight LineNr ctermfg=black ctermbg=cyan    
 
 inoremap jj <Esc>
 inoremap <C-c> <Esc>
