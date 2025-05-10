@@ -1,7 +1,6 @@
 # Git prompt
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+gitBranch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' 
 }
-
-export PS1="\u\[\033[36m\] : \h \[\033[35m\]\w\[\033[36m\]\$(parse_git_branch)\[\033[00m\] > "
+PS1='\[\e[38;5;49m\]\u\[\e[0m\] : \[\e[0m\]\h\[\e[0m\] \[\e[38;5;49m\]\W\[\e[0m\]\[\e[38;5;33m\]$(gitBranch) \[\e[0m\]\[\e[38;5;49m\]>\[\e[0m\] '
 
