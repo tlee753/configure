@@ -44,7 +44,7 @@
   prv = pull --rebase --verbose
   rh = reset HEAD --hard
   rlog = reflog
-  rp = rev-parse HEAD
+  rp = rev-parse --short HEAD
   rso = remote show origin
   s = status
   sapply = "!f() { git stash apply stash^{/$*}; }; f"
