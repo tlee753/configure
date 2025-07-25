@@ -1,63 +1,63 @@
 [user]
-  email = 
-  name = Tyler Lee
+    email = 
+    name = Tyler Lee
 
 [core]
-  autocrlf = input
-  editor = /usr/bin/vim
+    autocrlf = input
+    editor = /usr/bin/vim
 
 [push]
-  default = simple
+    default = simple
 
 [color]
-  branch = auto
-  diff = auto
-  status = auto
-  ui = always
+    branch = auto
+    diff = auto
+    status = auto
+    ui = always
 
 [color "diff-highlight"]
-  newHighlight = green bold 22
-  newNormal = green bold
-  oldHighlight = red bold 52
-  oldNormal = red bold
+    newHighlight = green bold 22
+    newNormal = green bold
+    oldHighlight = red bold 52
+    oldNormal = red bold
 
 [alias]
-  amend = commit -a --amend --no-edit
-  br = branch
-  ci = commit
-  co = checkout
-  dd = difftool -d
-  di = diff
-  lda = log --graph --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%aN%Cgreen%d %Creset%s' --date=format:%Y%j --all
-  ldp = log --graph --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%aN%Cgreen%d %Creset%s' --date=format:%Y%j
-  lg = log -p
-  logb = log --branches --not --remotes --name-status --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --date=format:%Y%j
-  logn = log --name-status --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=format:%Y%j
-  logp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(cyan)<%an>%Creset' --abbrev-commit --date=format:%Y_%j
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit --date=format:%Y%j
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=format:%Y%j
-  lolad = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=format:%Y%j
-  lolas = log --graph --decorate --pretty=oneline --abbrev-commit --all --stat --date=format:%Y%j
-  lols = log --graph --decorate --pretty=oneline --abbrev-commit --stat --date=format:%Y%j
-  ls = ls-files
-  pr = pull --rebase
-  prv = pull --rebase --verbose
-  rh = reset HEAD --hard
-  rlog = reflog
-  rp = rev-parse --short HEAD
-  rso = remote show origin
-  s = status
-  sapply = "!f() { git stash apply stash^{/$*}; }; f"
-  slist = submodule foreach --recursive git remote -v
-  smu = submodule update --recursive --init --progress
-  srh = submodule foreach git reset HEAD --hard
-  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
-  st = status -sb
-  stl = rev-parse --show-toplevel
+    amend = commit -a --amend --no-edit
+    br = branch
+    ci = commit
+    co = checkout
+    dd = difftool -d
+    di = diff
+    l = log --date-order --date=iso --graph --full-history --all --pretty=format:'%x08%x09%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset)%C(bold yellow)%d %C(reset)%s'
+    lda = log --graph --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%aN%Cgreen%d %Creset%s' --date=format:%Y%j --all
+    ldp = log --graph --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%aN%Cgreen%d %Creset%s' --date=format:%Y%j
+    lg = log -p
+    logb = log --branches --not --remotes --name-status --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --date=format:%Y%j
+    logn = log --name-status --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=format:%Y%j
+    logp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(cyan)<%an>%Creset' --abbrev-commit --date=format:%Y_%j
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --date=format:%Y%j
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=format:%Y%j
+    lolad = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=format:%Y%j
+    lolas = log --graph --decorate --pretty=oneline --abbrev-commit --all --stat --date=format:%Y%j
+    lols = log --graph --decorate --pretty=oneline --abbrev-commit --stat --date=format:%Y%j
+    ls = ls-files
+    pr = pull --rebase
+    prv = pull --rebase --verbose
+    rh = reset HEAD --hard
+    rlog = reflog
+    rp = rev-parse --short HEAD
+    rso = remote show origin
+    s = status
+    sapply = "!f() { git stash apply stash^{/$*}; }; f"
+    slist = submodule foreach --recursive git remote -v
+    smu = submodule update --recursive --init --progress
+    srh = submodule foreach git reset HEAD --hard
+    sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+    st = status -sb
+    stl = rev-parse --show-toplevel
 
 [filter "lfs"]
-  clean = git-lfs clean -- %f
-  process = git-lfs filter-process
-  required = true
-  smudge = git-lfs smudge -- %f
-
+    clean = git-lfs clean -- %f
+    process = git-lfs filter-process
+    required = true
+    smudge = git-lfs smudge -- %f
