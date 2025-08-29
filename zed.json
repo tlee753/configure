@@ -34,7 +34,7 @@
     "theme": {
         "dark": "The Dark Side",
         "light": "One Light",
-        "mode": "system"
+        "mode": "dark"
     },
     "ui_font_size": 16
 }
