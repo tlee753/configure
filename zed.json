@@ -1,0 +1,40 @@
+{
+    "autosave": {
+        "after_delay": {
+            "milliseconds": 1000
+        }
+    },
+    "buffer_font_size": 15,
+    "disable_ai": true,
+    "gutter": {
+        "breakpoints": false,
+        "folds": true,
+        "line_numbers": true,
+        "min_line_number_digits": 2,
+        "runnables": true
+    },
+    "minimap": {
+        "current_line_highlight": "line",
+        "show": "never",
+        "thumb": "always",
+        "thumb_border": "none"
+    },
+    "project_panel": {
+        "auto_fold_dirs": false
+    },
+    "tab_size": 4,
+    "tabs": {
+        "activate_on_close": "history",
+        "close_position": "right",
+        "file_icons": false,
+        "git_status": true,
+        "show_close_button": "hover",
+        "show_diagnostics": "off"
+    },
+    "theme": {
+        "dark": "The Dark Side",
+        "light": "One Light",
+        "mode": "system"
+    },
+    "ui_font_size": 16
+}
