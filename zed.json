@@ -13,6 +13,7 @@
         "min_line_number_digits": 2,
         "runnables": true
     },
+    "icon_theme": "Material Icon Theme",
     "minimap": {
         "current_line_highlight": "line",
         "show": "never",
