@@ -19,3 +19,5 @@ highlight EndOfBuffer ctermfg=black
 inoremap jj <Esc>
 inoremap <C-c> <Esc>
 
+command! Trim %s/\s\+$//e
+
