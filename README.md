@@ -10,4 +10,5 @@ reflector --country United States --completion-percent 100 -p https --sort rate 
 - tmux
 - fastfetch
 - btop
+- zed
 
