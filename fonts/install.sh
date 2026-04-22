@@ -8,4 +8,3 @@ else
   font_dir="$HOME/.local/share/fonts"
   mkdir -p $font_dir
 fi
-

@@ -9,6 +9,7 @@ reflector --country United States --completion-percent 100 -p https --sort rate 
 - firefox
 - git
 - paru
+- reflector
 - tmux
 - vim
 - vlc
