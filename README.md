@@ -11,6 +11,18 @@ reflector --country United States --completion-percent 100 -p https --sort rate 
 - paru
 - reflector
 - tmux
+- tree
+- unzip
 - vim
 - vlc
 - zed
+
+### Optional
+- 7zip
+- freecad
+- gimp
+- inkscape
+- jellyfin-desktop
+- mgba-qt
+- papers
+- workbench
