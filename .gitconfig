@@ -41,7 +41,7 @@
     lolas = log --graph --decorate --pretty=oneline --abbrev-commit --all --stat --date=format:%Y%j
     lols = log --graph --decorate --pretty=oneline --abbrev-commit --stat --date=format:%Y%j
     ls = ls-files
-    po = fetch origin --prune
+    po = "!git fetch origin --prune && git branch -vv | awk '/: gone]/ {print $1}' | xargs -r git branch -d"
     pr = pull --rebase
     prv = pull --rebase --verbose
     rh = reset HEAD --hard
